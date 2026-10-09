@@ -55,7 +55,7 @@ cp .env.example .env
 Set the connection URL for your local database:
 
 ```dotenv
-DATABASE_URL=postgresql://postgres:postgres@localhost:5432/job_queue
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/jobq
 ```
 
 Create the database before applying migrations. See [Configuration](docs/configuration.md) for the proposed settings.
@@ -73,13 +73,13 @@ uv run alembic upgrade head
 Once the application entry points are implemented, start the API:
 
 ```bash
-uv run uvicorn job_queue.api.main:app --reload
+uv run uvicorn jobq.api.main:app --reload
 ```
 
 Start the combined picker-worker process in another terminal:
 
 ```bash
-uv run python -m job_queue.picker.main
+uv run python -m jobq.picker.main
 ```
 
 API documentation:
@@ -87,7 +87,7 @@ API documentation:
 - Swagger UI: http://localhost:8000/docs
 - OpenAPI schema: http://localhost:8000/openapi.json
 
-The repository is named `jobq`; the Python import package is `job_queue`.
+The repository is named `jobq`; the Python import package is `jobq`.
 
 ## Architecture
 

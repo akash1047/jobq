@@ -15,7 +15,7 @@ uv sync
 cp .env.example .env
 ```
 
-Create a local PostgreSQL database named `job_queue` and configure `DATABASE_URL` in `.env`.
+Create a local PostgreSQL database named `jobq` and configure `DATABASE_URL` in `.env`.
 
 The application and Alembic must load this configuration.
 
@@ -40,13 +40,13 @@ Review generated migrations before applying them.
 Once the entry points are implemented:
 
 ```bash
-uv run uvicorn job_queue.api.main:app --reload
+uv run uvicorn jobq.api.main:app --reload
 ```
 
 In a separate terminal:
 
 ```bash
-uv run python -m job_queue.picker.main
+uv run python -m jobq.picker.main
 ```
 
 The picker entry point runs the combined picker-worker process.
@@ -75,6 +75,6 @@ Cover concurrent claims, ownership checks, retries, and recovery from expired le
 
 ## Package layout
 
-The repository is named `jobq`. The Python import package is `job_queue`, located under `src/job_queue/`.
+The repository is named `jobq`. The Python import package is `jobq`, located under `src/jobq/`.
 
 Configure the project as an installable package so `uv run` can import it.
