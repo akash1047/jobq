@@ -170,4 +170,4 @@ Participants are expected to follow [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ## License
 
-A license has not yet been selected.
+This project is licensed under the [MIT License](LICENSE). Copyright (c) 2026 Akash Lohar.

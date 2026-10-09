@@ -3,6 +3,8 @@ name = "jobq"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
     { name = "Akash Lohar", email = "94453657+akash1047@users.noreply.github.com" }
 ]
